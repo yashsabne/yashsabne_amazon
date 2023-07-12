@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registry</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+        * {
+        margin: 0;
+        font-family: Arial;
+        border: border-box;
+    }
+
+    .navbar {
+        height: 60px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-logo {
+        height: 50px;
+        width: 100px;
+    }
+
+    .logo {
+        background-image: url("amazon_logo.png");
+        background-size: cover;
+        height: 50px;
+        width: 100%;
+    }
+
+    .border {
+        border: 2px sollid transparent;
+    }
+
+    .border:hover {
+        border: 1.5px solid white;
+    }
+
+    /* .nav-address {
+    margin-top: 5px;
+} */
+    .deliver {
+        color: #cccccc;
+        font-size: 0.85rem;
+        margin-left: 14px;
+    }
+
+    .india {
+        color: white;
+        font-size: 1rem;
+    }
+
+    .add-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-search {
+        background-color: #febd68;
+        display: flex;
+        justify-content: space-evenly;
+        width: 620px;
+        height: 35px;
+        border-radius: 4px;
+    }
+
+    .nav-search:hover {
+        border: 2px solid orange;
+    }
+
+
+    .search-select {
+        background-color: #f3f3f3;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        width: 50px;
+        text-align: left;
+        border: none;
+        font-family:Georgia, 'Times New Roman', Times, serif ;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: large;
+        border: none;
+    }
+
+    .search-icon {
+        width: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #febd68;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: #0f1111;
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+
+    .nav-sec {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .last {
+        display: flex;
+    }
+    button {
+        background-color: #232f3e;
+        color: white;
+        border: none;
+    }
+
+    .down-navbar {
+        height: 39px;
+        background-color: #37475a;
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin: 10px;
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .right {
+        color: white;
+        font-weight: 700;
+        padding-left: 400px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .registry-nav {
+       height:64px;
+       display: flex;
+       align-items: center;
+       margin-left: 40px;
+
+
+    }
+    #registry {
+        border: none;
+        font-size:medium;
+    }
+    .hero-container {   
+        background-image: url("https://m.media-amazon.com/images/G/01/img18/home/registry/SavileRow_Registry_D._CB1198675309_.jpg");
+        background-size: cover;
+        height: 300px;
+        width: 100%;
+        position: sticky;
+    }
+    .the-gift {
+        padding-top:40px;
+        padding-left: 70px;
+
+    }
+
+    .gift {
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }   
+    .create-registry {
+        background-color:#febd68 ;
+        border-radius: 5px;
+        color: #232f3e;
+        margin-top: 35px;
+        height: 30px;
+        width: 200px;
+        cursor: pointer;
+    }
+    .whether {
+        font-size: larger;
+    }
+    .find-registry-gift {
+        background-color: #f4f2f3;
+        height: 140px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .give-gift-really {
+        height: 100px;
+        width: 100%;
+        margin-left: -245px;   
+    }
+    .resons-to-create {
+        height:200px ;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* position: relative;
+        top: 50px; */
+    }
+    .reason {
+        color: #232f3e;
+        font-size:x-large;
+        font-weight: 700;
+    }
+    .img-gift {
+        margin-top: 50px;
+        height: 250px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .img1 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+        width: 150px;
+    }
+    .learn-more {
+        margin-top: 25px;
+    }
+    .learn-img {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 266px;
+        width: 1150px;
+        margin-left: 70px;
+
+    }
+    .img-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 70.67px;
+        height: 100.67px;
+        margin-top: 90px;
+        padding-right:1px;
+        margin-bottom: 60px;
+    
+     }
+    .img-text {
+        width: 134.67px;
+        height: 60px;
+        border-right:1.5px solid rgb(107, 106, 106)  ;
+        border-bottom: 1.5px solid rgb(122, 120, 120);
+        margin-top: -15px;
+        padding:3px;
+    }
+    .foot-panal1 {
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #37475a;
+        color: white;
+        margin-top: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        border-top: 0.5px solid white;
+    }
+
+    .foot-panal2 {
+        height: 400px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        border-top: 0.5px solid white;
+        margin-top: 1px;
+        margin-bottom: 1px;
+
+    }
+
+    ul {
+        margin-top: 10px;
+
+    }
+
+    ul p {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+        color: #dddddd;
+    }
+
+    .foot-panal3 {
+        background-color: #232f3e;
+        color: white;
+        border-top: 0.5px solid white;
+        /* height: 75px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+    h5 {
+        margin-bottom: 5px;
+    }    
+    .foot-panal1 {
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #37475a;
+        color: white;
+        margin-top: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        border-top: 0.5px solid white;
+    }
+
+    .foot-panal2 {
+        height: 400px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        border-top: 0.px solid white;
+        margin-top: 1px;
+        margin-bottom: 1px;
+
+    }
+
+    ul {
+        margin-top: 10px;
+
+    }
+
+    ul p {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+        color: #dddddd;
+    }
+
+    .foot-panal3 {
+        background-color: #232f3e;
+        color: white;
+        border-top: 0.px solid white;
+        /* height: 75px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }    
+    h5 {
+        margin-bottom: 5px;
+    } 
+    .nav_a {
+    color: #dddddd;
+    text-decoration: none;
+    font-size: medium;
+  }
+  .navFooterDescText {
+    color: #999999;
+    font-size: small;
+  }
+  .navFooterLine-navFooterLinkLine-navFooterPadItemLine-navFooterCopyright {
+      margin-top: -10px;
+      background-color: #131a22;
+      color: #dddddd;
+  }
+ .navFooterLine-navFooterLinkLine-navFooterPadItemLine-navFooterCopyright li{
+   display: flex;
+   flex-direction: row;
+   list-style: none;
+   padding-right: 30px;
+ }
+ .navFooterLine-navFooterLinkLine-navFooterPadItemLine-navFooterCopyright ul {
+   display: flex;
+   justify-content: center;
+   padding: 40px;
+
+ } 
+ .yash {
+     background-color: #131a22;
+     color: #dddddd;
+ }   
+
+
+
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="deliver">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p style="cursor: pointer;" class="india">India</p>
+                </div>
+            </div>
+            <div class="nav-search border">
+                <select style="cursor: pointer;" class="search-select">
+                    <option>All</option>
+                    <option>All Department</option>
+                    <option>Arts & Craft</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Beauty & Personal Care</option>
+                    <option>Books</option>
+                    <option>Boys' Fashion</option>
+                    <option>Computers</option>
+                    <option>Deals</option>
+                    <option>Digital Music</option>  
+                    <option>Electronics</option>
+                    <option>Girls' Fashion</option>
+                    <option>Health & Household</option>
+                    <option>Home & Kitchen</option>
+                    <option>Industrial & Scientific</option>
+                    <option>Kindle Store</option>
+                    <option>Luggage</option>
+                    <option>Men's Fashion</option>
+                    <option>Movies & TV</option>
+                    <option>Music, CDs & Vinyl</option>
+                    <option>Pet Supplies</option>
+                    <option>Prime Videos</option>
+                    <option>Software</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Video Games</option>
+                    <option>Women's Fashion</option>
+                </select>
+                <input class="search-input" placeholder="Search Amazon">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-sign in border">
+               <button onclick="alert('You will be directed to sign in page.')"><p class="nav-first"><a href="amazon-sign-in.html"><span>Hello, sign in</span></a></p></button>
+                <p style="cursor: pointer;" class="nav-sec">Account & Lists</p>
+            </div>
+
+            <div style="cursor: pointer;" class="nav-return border">
+                <p class="nav-first"><a href="amazon-sign-in.html"><span>Return</span></a></p>
+                <p class="nav-sec"><a href="amazon-sign-in.html">& Orders</a></p>
+            </div>
+            <div style="cursor: pointer;" class="last border">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <div class="cart"><a href="cart.html">Cart</a></div>
+            </div>
+        </div>
+        <div class="down-navbar">
+            <a href="#">
+                <i class="fa-solid fa-bars"></i>
+                All</a>
+            <a href="#">Today's Deals</a>
+            <a href="customer_services.html">Costumer services</a>
+            <a href="registry.html">Registry</a>
+            <a href="#">Gift cards</a>
+            <a href="seller.html">Sell on amazon</a>
+            <a href="#" class="right">Shop Deals In Electronics</a>
+        </div>
+    </header>
+    <div class="registry-nav">
+        <a style="color: #232f3e; font-size: large;font-weight: 750; margin-right: 30px;" href="">registry and gifting</a>
+        
+        <select name="registry" id="registry">
+            <option value="">Find registry or gift list</option>
+            <option value="">Wedding Registry</option>
+            <option value="">Baby Registry</option>
+            <option value="">Gift Lists</option>
+        </select>
+
+        <a style="color: #232f3e;margin-right: 30px;" href="">Create a registry or gift list</a>
+        <a style="color: #232f3e;margin-right: 30px;" href="">Help</a>
+    </div>
+    <div class="hero-container">
+        <div class="the-gift">
+         <div class="gift">The gift of better gift-giving</div>
+         <div class="whether">
+             Whether you're celebrating a wedding, a baby, a <br>
+             birthday, or other memorable milestones, our Gift LIsts <br>
+             and registries will help you and your guests find <br> the perfect gifts.
+         </div>
+
+         <button class="create-registry">Create a registry or gift list</button>
+        </div>
+    </div>
+
+    <!-- registry or gift Lists -->
+    <div class="find-registry-gift">
+       
+       <div style="padding-top: 25px; font-size: larger; "><b> Find a registry or gift list</b></div> <br>
+
+       <div style="margin-left: -450px; margin-top: 10px;margin-bottom: -15px;" >Registrant name</div> <br>
+       <input style="margin-left: 155px; width: 270px;height: 17px;border-radius: 5px;border: 0.3px solid gray;" type="text" placeholder="Search by Registrant name"></input>
+       <select style="margin-left: 10px; width: 270px;height: 22px;border-radius: 5px;border: 0.3px solid gray;"  type="text" placeholder="select a registry or gift list type" >
+           <option value="">Wedding Registry</option>
+           <option value="">Baby registry</option>
+           <option value="">Gift lists</option>
+       </select>
+       <button style="margin-left: 15px;cursor: pointer ;background-color: #232f3e; color: white;width: 150px;height: 23px;border-radius: 5px; " type="search">Search</button>
+     
+    </div>
+
+    <div class="give-gift-really">
+        <a href=""><img src="https://m.media-amazon.com/images/G/01/home/awr/2023_Projects/GiftLists/EN-Short_Desktop_Hero_1500x150._CB603578125_.png" alt=""></a>
+    </div>
+
+    <div class="resons-to-create">
+        <div class="reason"> 
+            Reasons to create a registry or gift list on Amazon
+        </div>
+    </div>
+
+    <div class="img-gift">
+        <div class="img1">
+            <img height="130px" width="180px" src="https://m.media-amazon.com/images/G/01/img18/home/customgiftlist/icon_Celebrate.svg" alt="">
+                <div style="font-size: larger;">Celebrate any milestone</div> <br>
+                <p>Add items from Amazon to create a gift registry for any occasion.</p>
+
+        </div>
+        <div class="img1">
+            <img src="https://m.media-amazon.com/images/G/01/img18/home/customgiftlist/icon_Share.svg" alt="">
+            <div style="font-size: larger;">Easy to share</div> <br>
+            <p>Share your Gift lists with friends and family so they'll know exactly what gifts to get.
+            </p>    
+        </div>
+        <div class="img1">
+            <img src="https://m.media-amazon.com/images/G/01/img18/home/customgiftlist/icon_Return.svg" alt="">
+            <div style="font-size: larger;">Extended returns</div> <br>
+            <p>Gift not quite right? Gift registry purchases have an extended return period.
+            </p>    
+        </div>
+        <div class="img1">
+            <img src="https://m.media-amazon.com/images/G/01/img18/home/customgiftlist/icon_Thank_you.svg" alt="">
+            <div style="font-size: larger;">Thank you list</div> <br>
+            <p>We keep track of who bought what gift and when, so it's easy for you to send thank you notes.</p>    
+        </div>
+    </div>
+                   <!-- learn more okey yash -->
+
+    <div class="learn-more">
+        <h3 style="text-align: center;">Learn more about our different registries and gifts lists</h3>
+        <div class="learn-img">
+            <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/img18/home/2021/Gift_List_Registry/gift/wedding_registry_238x238.jpg" alt=""></a>
+            <div class="img-text">
+                I'm getting married
+            </div>     
+        </div>
+        <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/baby/registry/v2/dsk/homepage/Babysquare.jpg" alt=""></a>
+            <div class="img-text">
+                I'm welcoming a <br> baby
+            </div>     
+        </div>
+        <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/img18/home/2021/Gift_List_Registry/gift/custom_gift_238x238.jpg" alt=""></a>
+            <div class="img-text">
+                celebrating a <br>
+                different occasion
+            </div>     
+        </div>
+        <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/img18/home/2021/Gift_List_Registry/gift/birthday_gift_238x238.jpg" alt=""></a>
+            <div class="img-text">
+                Celebrating a <br>
+                child's birthday
+            </div>     
+        </div>
+        <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/img18/home/2021/Gift_List_Registry/gift/Holiday_238x238-2.jpg" alt=""></a>
+            <div class="img-text">
+                preparing for the <br>
+                Winter holidays
+            </div>     
+        </div>
+        <div class="img-div">
+            <a style="margin-right: 15px;" href=""><img height="134px" width="134px" src="https://m.media-amazon.com/images/G/01/img20/pets/PetGiftList/117447_Pet_Gift_List_Ingress_Image.jpg" alt=""></a>
+            <div class="img-text">
+                Celebrating a pet
+            </div>     
+        </div>
+        </div>
+    </div>
+  
+    <footer>
+        <div class="foot-panal1">
+           <a href="#">Back To Top</a>
+        </div>
+        <div class="foot-panal2">
+            <ul>
+                <p style="font-weight: 900;"> Get to Know Us</p>
+                <p>Careers</p>
+                <p>Blog</p>
+                <p>About Amazon</p>
+                <p>Amazon Devices</p>
+                <p>Amazon Science</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Make Money with Us</p>
+                <p>Sell product on Amazon</p>
+                <p>Sell on Amazon Business</p>
+                <p>Sell apps on Amazon</p>
+                <p>Become an Affiliate</p>
+                <p>Advertise Your product</p>
+                <p>Self-publish with us</p>
+                <p>Host an Amazon Hub</p>
+                <p>›See More Make Money with Us</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Amazon Payment Products</p>
+                <p>Amazon Business cards</p>
+                <p>Shop with Points</p>
+                <p>Amazon Currency Converter</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Let Us Help You</p>
+                <p>Amazon and COVID-19</p>
+                <p>Your Account</p>
+                <p>YOur Order</p>
+                <p>Shipping Rates & <br>Policies</p>
+                <p>Returns & <br>Replacements</p>
+                <p>Manage your <br>Content and devices</p>
+                <p>Amazon Assistant</p>
+                <p>Help</p>
+            </ul>
+        </div>
+        <div class="foot-panal3">
+            thank you with love<i class="fa-solid fa-heart"></i>
+            <h4>This website is created by Yash Technology Pvt.Ltd </h4> 
+            © copyright
+            <h5>give us your rating to our website developer<a style="font-size: small; color:red ;" href="
+                explore.html">Click here</a></h5>
+        </div>
+    </footer>
+         <!-- NAVYAAN FOOTER START -->
+
+         <div class="nav-footer-line"></div>
+         <div class="yash">
+           <div class="navFooterLine navFooterLinkLine navFooterPadItemLine">
+             <span>
+               <div class="navFooterLine navFooterLogoLine">
+                 <a  aria-label="Amazon US Home"  href="/?ref_=footer_logo">
+                 <div class="nav-logo-base nav-sprite"></div>
+                 </a>
+               </div>
+         </span>
+             
+               <span class="icp-container-desktop"><div
+                   class="navFooterLine">
+         <style type="text/css">
+           #icp-touch-link-language { display: none; }
+         </style>
+         
+         
+         <a href="/customer-preferences/edit?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_lang" aria-label="Choose a language for shopping." class="icp-button" id="icp-touch-link-language">
+           <div class="icp-nav-globe-img-2 icp-button-globe-2"></div><span class="icp-color-base">English</span><span class="nav-arrow icp-up-down-arrow"></span>
+         </a>
+         
+         
+         
+         <style type="text/css">
+           #icp-touch-link-cop { display: none; }
+         </style>
+         
+         <a href="/customer-preferences/edit?ie=UTF8&ref_=footer_cop&preferencesReturnUrl=%2Fgp%2Fhelp%2Fcustomer%2Fdisplay.html" class="icp-button" id="icp-touch-link-cop">
+           <span class="icp-currency-symbol">$</span><span class="icp-color-base">USD - U.S. Dollar</span>
+         </a>
+         
+         <style type="text/css">
+         #icp-touch-link-country { display: none; }
+         </style>
+         <a href="/customer-preferences/country?ie=UTF8&preferencesReturnUrl=%2F&ref_=footer_icp_cp" aria-label="Choose a country/region for shopping." class="icp-button" id="icp-touch-link-country">
+           <span class="icp-flag-3 icp-flag-3-us"></span><span class="icp-color-base">United States</span>
+         </a>
+         </div></span>
+             
+           </div>
+           
+           
+           <div class="navFooterLine navFooterLinkLine navFooterDescLine" role="navigation" aria-label="More on Amazon">
+             <table class="navFooterMoreOnAmazon" cellspacing="0" summary="More on Amazon">
+               <tr>
+         <td class="navFooterDescItem"><a href=https://music.amazon.com?ref=dm_aff_amz_com class="nav_a">Amazon Music<br><span class="navFooterDescText">Stream millions<br>of songs</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://advertising.amazon.com/?ref=footer_advtsing_amzn_com class="nav_a">Amazon Advertising<br><span class="navFooterDescText">Find, attract, and<br>engage customers</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.6pm.com class="nav_a">6pm<br><span class="navFooterDescText">Score deals<br>on fashion brands</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.abebooks.com class="nav_a">AbeBooks<br><span class="navFooterDescText">Books, art<br>& collectibles</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.acx.com/ class="nav_a">ACX <br><span class="navFooterDescText">Audiobook Publishing<br>Made Easy</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://sell.amazon.com/?ld=AZUSSOA-footer-aff&ref_=footer_sell class="nav_a">Sell on Amazon<br><span class="navFooterDescText">Start a Selling Account</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=/business?ref_=footer_retail_b2b class="nav_a">Amazon Business<br><span class="navFooterDescText">Everything For<br>Your Business</span></a></td></tr>
+         <tr><td>&nbsp;</td></tr>
+         <tr>
+         <td class="navFooterDescItem"><a href=/gp/browse.html?node=230659011&ref_=footer_amazonglobal class="nav_a">AmazonGlobal<br><span class="navFooterDescText">Ship Orders<br>Internationally</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=/services?ref_=footer_services class="nav_a">Home Services<br><span class="navFooterDescText">Experienced Pros<br>Happiness Guarantee</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://ignite.amazon.com/?ref=amazon_footer_ignite class="nav_a">Amazon Ignite<br><span class="navFooterDescText">Sell your original<br>Digital Educational<br>Resources</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://aws.amazon.com/what-is-cloud-computing/?sc_channel=EL&sc_campaign=amazonfooter class="nav_a">Amazon Web Services<br><span class="navFooterDescText">Scalable Cloud<br>Computing Services</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.audible.com class="nav_a">Audible<br><span class="navFooterDescText">Listen to Books & Original<br>Audio Performances</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.bookdepository.com class="nav_a">Book Depository<br><span class="navFooterDescText">Books With Free<br>Delivery Worldwide</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.boxofficemojo.com/?ref_=amzn_nav_ftr class="nav_a">Box Office Mojo<br><span class="navFooterDescText">Find Movie<br>Box Office Data</span></a></td></tr>
+         <tr><td>&nbsp;</td></tr>
+         <tr>
+         <td class="navFooterDescItem"><a href=https://www.comixology.com class="nav_a">ComiXology<br><span class="navFooterDescText">Thousands of<br>Digital Comics</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.dpreview.com class="nav_a">DPReview<br><span class="navFooterDescText">Digital<br>Photography</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.fabric.com class="nav_a">Fabric<br><span class="navFooterDescText">Sewing, Quilting<br>& Knitting</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.goodreads.com class="nav_a">Goodreads<br><span class="navFooterDescText">Book reviews<br>& recommendations</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.imdb.com class="nav_a">IMDb<br><span class="navFooterDescText">Movies, TV<br>& Celebrities</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://pro.imdb.com?ref_=amzn_nav_ftr class="nav_a">IMDbPro<br><span class="navFooterDescText">Get Info Entertainment<br>Professionals Need</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://kdp.amazon.com class="nav_a">Kindle Direct Publishing<br><span class="navFooterDescText">Indie Digital & Print Publishing<br>Made Easy
+         </span></a></td></tr>
+         <tr><td>&nbsp;</td></tr>
+         <tr>
+         <td class="navFooterDescItem"><a href=https://videodirect.amazon.com/home/landing class="nav_a">Prime Video Direct<br><span class="navFooterDescText">Video Distribution<br>Made Easy</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.shopbop.com class="nav_a">Shopbop<br><span class="navFooterDescText">Designer<br>Fashion Brands</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.woot.com/ class="nav_a">Woot!<br><span class="navFooterDescText">Deals and <br>Shenanigans</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.zappos.com class="nav_a">Zappos<br><span class="navFooterDescText">Shoes &<br>Clothing</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://ring.com class="nav_a">Ring<br><span class="navFooterDescText">Smart Home<br>Security Systems
+         </span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://eero.com/ class="nav_a">eero WiFi<br><span class="navFooterDescText">Stream 4K Video<br>in Every Room</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://blinkforhome.com/?ref=nav_footer class="nav_a">Blink<br><span class="navFooterDescText">Smart Security<br>for Every Home
+         </span></a></td></tr>
+         <tr><td>&nbsp;</td></tr>
+         <tr>
+         <td class="navFooterDescItem">&nbsp;</td>
+         <td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem">&nbsp;</td>
+         <td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://shop.ring.com/pages/neighbors-app class="nav_a">Neighbors App <br><span class="navFooterDescText"> Real-Time Crime<br>& Safety Alerts
+         </span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=/gp/browse.html?node=14498690011&ref_=amzn_nav_ftr_swa class="nav_a">Amazon Subscription Boxes<br><span class="navFooterDescText">Top subscription boxes – right to your door</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem"><a href=https://www.pillpack.com class="nav_a">PillPack<br><span class="navFooterDescText">Pharmacy Simplified</span></a></td><td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem">&nbsp;</td>
+         <td class="navFooterDescSpacer" style="width: 3%"></td>
+         <td class="navFooterDescItem">&nbsp;</td>
+         </tr>
+         
+             </table>
+           </div>
+         
+         </div>
+         <div id="sis_pixel_r2" aria-hidden="true" style="height:1px; position: absolute; left: -1000000px; top: -1000000px;"></div><script>(function(a,b){a.attachEvent?a.attachEvent("onload",b):a.addEventListener&&a.addEventListener("load",b,!1)})(window,function(){setTimeout(function(){var el=document.getElementById("sis_pixel_r2");el&&(el.innerHTML='<iframe id="DAsis" src="//s.amazon-adsystem.com/iu3?d=amazon.com&slot=navFooter&a2=0101ac6388f86c3f83807cb4aa8a3fb7f8f5729c7c4038d581ca02b4056065d05651&old_oo=0&ts=1689069908966&s=AQvw-MER5xUm10A3FeTHu2Yul5aVuLpkk2hnwv8ZqvdN&gdpr_consent=&gdpr_consent_avl=&cb=1689069908966" width="1" height="1" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" tabindex="-1" sandbox></iframe>')},300)});</script>
+         <div class="navFooterLine-navFooterLinkLine-navFooterPadItemLine-navFooterCopyright">
+           <ul>
+             <li class="nav_first"><a href="/gp/help/customer/display.html?nodeId=508088&ref_=footer_cou" id="yash" class="nav_a">Conditions of Use</a> </li>
+           <li ><a href="/gp/help/customer/display.html?nodeId=468496&ref_=footer_privacy" id="yash" class="nav_a">Privacy Notice</a> </li>
+           <li ><a href="/privacyprefs?ref_=footer_iba" id="yash" class="nav_a">Your Ads Privacy Choices</a> </li>
+           <li class="nav_last"><span id="nav-icon-ccba" class="nav-sprite"></span> </li>
+         </ul>
+         <span style="display: flex;justify-content: center;margin-top: -20px;">© 1996-2023, Amazon.com, Inc. or its affiliates</span>
+         </div>
+       </div>
+       <div class="div-color" style="background-color: #131a22;height: 25px;"></div>
+
+</body>
+</html>

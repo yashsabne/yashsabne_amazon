@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+        * {
+        margin: 0;
+        font-family: Arial;
+        border: border-box;
+    }
+
+    .navbar {
+        height: 60px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-logo {
+        height: 50px;
+        width: 100px;
+    }
+
+    .logo {
+        background-image: url("amazon_logo.png");
+        background-size: cover;
+        height: 50px;
+        width: 100%;
+    }
+
+    .border {
+        border: 2px sollid transparent;
+    }
+
+    .border:hover {
+        border: 1.5px solid white;
+    }
+
+    /* .nav-address {
+    margin-top: 5px;
+} */
+    .deliver {
+        color: #cccccc;
+        font-size: 0.85rem;
+        margin-left: 14px;
+    }
+
+    .india {
+        color: white;
+        font-size: 1rem;
+    }
+
+    .add-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-search {
+        background-color: #febd68;
+        display: flex;
+        justify-content: space-evenly;
+        width: 620px;
+        height: 35px;
+        border-radius: 4px;
+    }
+
+    .nav-search:hover {
+        border: 2px solid orange;
+    }
+
+
+    .search-select {
+        background-color: #f3f3f3;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        width: 50px;
+        text-align: center;
+        border: none;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: large;
+        border: none;
+    }
+
+    .search-icon {
+        width: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #febd68;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: #0f1111;
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+
+    .nav-sec {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .last {
+        display: flex;
+    }
+    button {
+        background-color: #232f3e;
+        color: white;
+        border: none;
+    }
+
+    .down-navbar {
+        height: 39px;
+        background-color: #37475a;
+        align-items: center;
+        display: flex;
+        align-items: center;
+    }
+
+    a {
+        margin: 10px;
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .right {
+        color: white;
+        font-weight: 700;
+        padding-left: 400px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    main {
+        background-color: #eaeded;
+        height: 1300px;
+    }
+    .cart-img {
+        width: 192px;
+        height: 110px;
+        text-align: left;
+        position: relative;
+        top: 30px;
+        left: 30px;
+        
+    }
+    .Your-amazon-cart-empty {
+        display: flex;
+        flex-direction: row;
+        width: 900px;
+        height: 200px;
+        background-color: white;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 20px;
+        /* float: left; */
+
+    }
+    .cart-info {
+        position: relative;
+        top: 50px;
+        left: 40px;
+    }
+    .sign-in-cart {
+        color: #0f1111;
+        background-color: #febd68;
+        border-radius: 6px;
+        position: relative;
+        left: 20px;
+        top: 20px;
+        border: 5px solid #febd68;
+    }
+    .sign-up-cart {
+        color: #0f1111;
+        background-color: white;
+        border-radius: 6px;
+        position: relative;
+        left: 10px;
+        top: 20px;
+        border:0.5px solid #0f1111;
+        padding: 4px 4px 4px 4px;
+        
+    }
+    .empty-space {
+        background-color: #ffffff;
+        position: absolute;
+        top: 340px;
+        height: 60px;
+        width: 900px;
+        margin-left: 20px;
+    }
+    .info {
+        position: relative;
+        top: 110px;
+        font-size:small;
+        margin-left: 20px;
+    }
+    .international--seller {
+        background-color: #ffffff;
+        width: 300px;
+        height: 1215px;
+        position: absolute;
+        right: 20px;
+        top: 115px;
+        border-radius: 7px;
+    }
+    .item-list {
+        margin-top:5px ;
+        margin-left:10px;
+        margin-bottom: 30px;
+    }
+    .img1 {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 50px;
+        align-items: center;
+        width: 250px;
+    }
+    .pascal {
+        color: #007185;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: small;
+    }
+    .info-img {
+        display: flex;
+        flex-direction: column;
+        margin-left: 23px;
+    }
+    .add-to-cart {
+        height: 30px;
+        width: 90px;
+        border-radius: 10px;
+        color: black;
+        background-color: #febd68;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .new-costumer-frequently-purchased {
+        margin-top: 990px;
+        height: 370px;
+        background-color: #ffffff;
+        /* display: flex; */
+    }
+    .list-purchased {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .img2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100px; 
+        height: 300px;
+    }
+    .down-sign-in {
+        height: 130px;
+        display: flex;
+        flex-direction:column ;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .sign-in-button-down {
+        width: 250px;
+        height: 30px;
+        text-align: center;
+        background-color: #febd68;
+        border-radius: 7px;
+        color: black;
+        font-weight: 700;
+        margin-bottom: 3px;
+    }
+    .empty-space-down {
+        height: 3px;
+    }
+    .foot-panal1 {
+        height: 49px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #37475a;
+        color: white;
+        margin-top: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        border-top: 0.5px solid black;
+    }
+
+    .foot-panal2 {
+        height: 400px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        justify-content: space-evenly;
+        border-top: 0.1px solid black;
+        margin-top: 1px;
+        margin-bottom: 1px;
+
+    }
+
+    ul {
+        margin-top: 10px;
+
+    }
+
+    ul p {
+        display: block;
+        font-size: 0.85rem;
+        margin-top: 10px;
+        color: #dddddd;
+    }
+
+    .foot-panal3 {
+        background-color: #232f3e;
+        color: white;
+        border-top: 0.1px solid black;
+        /* height: 75px; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }    
+    h5 {
+        margin-bottom: 5px;
+    } 
+
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="deliver">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p style="cursor: pointer;" class="india">India</p>
+                </div>
+            </div>
+            <div class="nav-search border">
+                <select style="cursor: pointer;" class="search-select">
+                    <option>All</option>
+                    <option>All Department</option>
+                    <option>Arts & Craft</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Beauty & Personal Care</option>
+                    <option>Books</option>
+                    <option>Boys' Fashion</option>
+                    <option>Computers</option>
+                    <option>Deals</option>
+                    <option>Digital Music</option>  
+                    <option>Electronics</option>
+                    <option>Girls' Fashion</option>
+                    <option>Health & Household</option>
+                    <option>Home & Kitchen</option>
+                    <option>Industrial & Scientific</option>
+                    <option>Kindle Store</option>
+                    <option>Luggage</option>
+                    <option>Men's Fashion</option>
+                    <option>Movies & TV</option>
+                    <option>Music, CDs & Vinyl</option>
+                    <option>Pet Supplies</option>
+                    <option>Prime Videos</option>
+                    <option>Software</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Video Games</option>
+                    <option>Women's Fashion</option>
+
+
+                </select>
+                <input class="search-input" placeholder="Search Amazon">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-sign in border">
+               <button onclick="alert('You will be directed to sign in page')"><p class="nav-first"><a href="amazon-sign-in.html"><span>Hello, sign in</span></a></p></button>
+                <p style="cursor: pointer;" class="nav-sec">Account & Lists</p>
+            </div>
+
+            <div style="cursor: pointer;" class="nav-return border">
+                <p class="nav-first"><span>Return</span></p>
+                <p class="nav-sec">& Orders</p>
+            </div>
+            <div style="cursor: pointer;" class="last border">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <div class="cart"><a href="cart.html">Cart</a></div>
+            </div>
+        </div>
+        <div class="down-navbar">
+            <a href="#">
+                <i class="fa-solid fa-bars"></i>
+                All</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Costumer services</a>
+            <a href="#">Regularity</a>
+            <a href="#">Gift cards</a>
+            <a href="#">Sell on amazon</a>
+            <a href="#" class="right">Shop Deals In Electronics</a>
+        </div>
+    </header>
+    <main>
+    <div class="Your-amazon-cart-empty">
+        <div class="cart-img">
+            <img class="cart-img" src="https://m.media-amazon.com/images/G/01/cart/empty/kettle-desaturated._CB445243794_.svg" alt="cart-image">
+        </div>
+        <div class="cart-info">
+       <h2 style="color: #0f1111; margin-left: 20px;">Your Amazon Cart is empty</h2>
+        <a style="margin-top: 3px; font-size: small;color: #0f1111; margin-left: 20px;">Shop today's deals</a> <br>
+        <a class="sign-in-cart" style="margin-top: 3px; color: #0f1111;" href="sign-in.html"><span style="font-size: medium;">Sign in to your account</span></a>
+        <a class="sign-up-cart" style="margin-top: 3px; color: #0f1111;" href="sign-in.html"><span style="font-size: medium;">Sign up now</span></a>
+    </div>
+    </div>
+    <div class="empty-space"></div>
+    <div class="info">
+        
+The price and availability of items at Amazon.com are subject to change. The Cart is my self yash a list of your items and reflects each item's and most recent <br> price. Learn more <br>
+Do you have a gift card or promotional code? We'll ask you to enter your claim code when it's time to pay.
+    </div>
+    <div class="international--seller">
+        <h3 style="margin-top: 10px; margin-left: 10px;">International top sellers</h3>
+        <div class="item-list">
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/71OW35xUTkL._AC_UL100_SR100,100_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1"> Disruption:H....  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div>
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $18.00
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/613husHS6EL._AC_UL100_SR100,100_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">StarTech.com 1 Port  PCle Gigabit Network.. </div>
+            <!-- <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div> -->
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $17.95
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/51sAy3AKiyL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">Musings of a Lost Soul  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">Prachi Saswade </a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div>
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $4.89
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/71Z-Dmc7RoL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">MOusture like soft  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $18.00
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/61fji+hyAVL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">Decoding Sponsorshi.. </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">>/Pascal Finette</a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $59.38
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img1">
+            <img width="130px" src="https://images-na.ssl-images-amazon.com/images/I/71PRhT0n0rL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">bottle in the world  </div>
+            <!-- <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div> -->
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $55.58
+            </div>
+            <button style="margin-left: 10px;" class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+
+    </div>
+    </div>
+    <!-- new-costumer-frequently-purchased new start -->
+    <div class="new-costumer-frequently-purchased">
+        <h3 style="padding-top: 15px; margin-left: 10px;">New customers frequently purchased</h3>
+        <br>
+       <br> <div class="list-purchased">
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/71OW35xUTkL._AC_UL100_SR100,100_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1"> Disruption:H....  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div>
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $18.00
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/613husHS6EL._AC_UL100_SR100,100_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">StarTech.com 1 Port  PCle Gigabit Network.. </div>
+            <!-- <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div> -->
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $17.95
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/51sAy3AKiyL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">Musings of a Lost Soul  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">Prachi Saswade </a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div>
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $4.89
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/71Z-Dmc7RoL._AC_UL200_SR200,200_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">MOusture like soft  </div>
+            <!-- <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div> -->
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $18.00
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/71OW35xUTkL._AC_UL100_SR100,100_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1"> Disruption:H....  </div>
+            <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div>
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div>
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $18.00
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+        <div class="img2">
+            <img height="60px" width="70px" src="https://images-na.ssl-images-amazon.com/images/I/41TANOAjCFL._AC_UL160_SR160,160_.jpg" alt="book">
+            <div class="info-img">
+            <div style="color: #007185; margin-bottom: 3px;" class="name1">Latest bulb of Wipro Network.. </div>
+            <!-- <div><a style="margin-bottom: 3px;" class="pascal" href="#">>Pascal Finette</a></div> -->
+            <div style="margin-bottom: 3px" class="stars">star-icon</div>
+            <!-- <div style="color: #565959; margin-bottom: 3px" href="">Paperback</div> -->
+            <div style="color: #b12704; margin-bottom: 3px" class="money">
+                $17.95
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
+        </div>
+ 
+    </div>
+
+    </div>
+    <hr>
+    <div class="down-sign-in">
+        <a style="font-size: small; color: #565959;" href="">See personilized recommendations</a>
+        <button class="sign-in-button-down">Sign in</button> 
+        <p style="font-size:15px ;">New customer?<a style="color: black;" href="">Start here</a> </p>
+    </div>
+    <hr>
+    <div class="empty-space-down"></div>
+    <footer>
+        <div class="foot-panal1">
+           <a href="#">Back To Top</a>
+        </div>
+        <div class="foot-panal2">
+            <ul>
+                <p style="font-weight: 900;"> Get to Know Us</p>
+                <p>Careers</p>
+                <p>Blog</p>
+                <p>About Amazon</p>
+                <p>Amazon Devices</p>
+                <p>Amazon Science</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Make Money with Us</p>
+                <p>Sell product on Amazon</p>
+                <p>Sell on Amazon Business</p>
+                <p>Sell apps on Amazon</p>
+                <p>Become an Affiliate</p>
+                <p>Advertise Your product</p>
+                <p>Self-publish with us</p>
+                <p>Host an Amazon Hub</p>
+                <p>›See More Make Money with Us</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Amazon Payment Products</p>
+                <p>Amazon Business cards</p>
+                <p>Shop with Points</p>
+                <p>Amazon Currency Converter</p>
+            </ul>
+            <ul>
+                <p style="font-weight: 900;">Let Us Help You</p>
+                <p>Amazon and COVID-19</p>
+                <p>Your Account</p>
+                <p>YOur Order</p>
+                <p>Shipping Rates & <br>Policies</p>
+                <p>Returns & <br>Replacements</p>
+                <p>Manage your <br>Content and devices</p>
+                <p>Amazon Assistant</p>
+                <p>Help</p>
+            </ul>
+        </div>
+    
+        <div class="foot-panal3">
+            thank you with love<i class="fa-solid fa-heart"></i>
+            <h4>This website is created by Yash Technology Pvt.Ltd </h4> 
+            @copyright
+            <h5>give us your rating to our website developer<a style="font-size: small; color:red ;" href="
+                explore.html">Click here</a></h5>
+        </div>
+    </footer>
+</main>  
+
+</body>
+</html>

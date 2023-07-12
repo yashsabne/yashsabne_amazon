@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seller amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    * {
+        margin: 0;
+        font-family: Arial;
+        /* border: border-box; */
+    }
+
+    .navbar {
+        height: 60px;
+        background-color: #232f3e;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .nav-logo {
+        height: 50px;
+        width: 100px;
+    }
+
+    .logo {
+        background-image: url("amazon_logo.png");
+        background-size: cover;
+        height: 50px;
+        width: 100%;
+    }
+
+    .border {
+        border: 2px sollid transparent;
+    }
+
+    .border:hover {
+        border: 1.5px solid white;
+    }
+
+    /* .nav-address {
+    margin-top: 5px;
+} */
+    .deliver {
+        color: #cccccc;
+        font-size: 0.85rem;
+        margin-left: 14px;
+    }
+
+    .india {
+        color: white;
+        font-size: 1rem;
+    }
+
+    .add-icon {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav-search {
+        background-color: #febd68;
+        display: flex;
+        justify-content: space-evenly;
+        width: 620px;
+        height: 35px;
+        border-radius: 4px;
+    }
+
+    .nav-search:hover {
+        border: 2px solid orange;
+    }
+
+
+    .search-select {
+        background-color: #f3f3f3;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        width: 50px;
+        text-align: left;
+        border: none;
+        font-family:Georgia, 'Times New Roman', Times, serif ;
+    }
+
+    .search-input {
+        width: 100%;
+        font-size: large;
+        border: none;
+    }
+
+    .search-icon {
+        width: 43px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #febd68;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        color: #0f1111;
+    }
+
+    span {
+        font-size: 0.7rem;
+    }
+
+    .nav-sec {
+        font-size: 0.85rem;
+        font-weight: 700;
+    }
+
+    .last {
+        display: flex;
+    }
+    button {
+        background-color: #232f3e;
+        color: white;
+        border: none;
+    }
+
+    .down-navbar {
+        height: 39px;
+        background-color: #37475a;
+        align-items: center;
+        display: flex;
+        align-items: center;
+
+    }
+
+    a {
+        margin: 10px;
+        color: white;
+        font-size: medium;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .right {
+        color: white;
+        font-weight: 700;
+        padding-left: 400px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .start-sell-now {
+        display: flex;
+        align-items: center;
+        height: 70px;
+        justify-content: space-around;
+        background-color: white;
+    }
+    .center-start {
+        display: flex;
+        align-items: center;
+    }
+    svg {
+			display: inline-block;
+			position: absolute;
+			top: 79px;
+			left: 0;
+			z-index: -1;
+		}
+		.container {
+			display: inline-block;
+			position: absolute;
+			width: 100%;
+			padding-bottom: 100%;
+			vertical-align: middle;
+            height: 900px;
+			overflow: hidden;
+			top: 100px;
+			left: 0;
+		}
+
+        .see-img {
+            position: absolute;
+            right:-150px;
+            top: 100px;
+        
+     
+        }
+        .start-big {
+            font-size: 58px;
+            font-weight: bolder;
+            height: 250px;
+            width: 440px;
+            color: #232f3e;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 30px;
+            margin-top: 35px;   
+        }
+        .fastest-growing {
+            margin-left: 50px;
+            margin-top: -70px;
+            color: #232f3e;
+        }
+        .sign-up-sell {
+            height: 60px;
+            width: 162px;
+            background-color: #ff9900;
+            color: #232f3e;
+            padding: 16px 36px;
+            font-weight: 800;
+            border-radius: 20px;
+            font-size: large;
+            display: flex;align-items: center;
+            justify-content: center;
+            margin-bottom:5px;
+            cursor: pointer;
+        }
+        .sign-up-sells {
+            width: 300px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: small;
+        } 
+        .new-img-sell {
+            display: flex;
+            margin-top: 300px;
+            justify-content: center;
+        }
+        .img1-yash {
+            height: 650px;
+            width: 470px;
+            background-image: url("new-republic-06.jpg");
+            background-size: cover;
+            border: 1px solid black;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .img2-yash {
+            height: 650px;
+            width: 470px;
+            margin-left: 34px;
+            border: 1px solid black;
+            border-radius: 7px;
+            background-color: #161e2d;
+        }
+        .logo-yash {
+            margin-top: 20px;
+            margin-left: 30px;
+            font-weight: 700;
+            color: white;
+        }
+        .border {
+            margin-top: 30px;
+            margin-left:30px;
+        }
+        .TEXT-IMG2 {
+            margin-top: 20px;
+            margin-left: 30px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 276px;
+            width: 288px;
+        }
+        .co-founder-name {
+            margin-top: -45px;
+            display: flex;
+            align-items: center;
+
+        }
+        .div1 {
+            background-color: #232f3e;
+            height: 180px;
+            width: 170px;
+            border-radius: 8px;
+            margin-top: 28px;
+            margin-left: 17px;
+        }
+        .boss-div
+         {
+             display: flex;
+         }
+         .all-new-seller-incentives {
+             margin-top: 120px;
+             margin-left: 80px;
+             display: flex;
+             padding: 30px;
+         }
+         .new-seller-incentives {
+             background-color: #008296;
+             color: #ffffff;
+             width: 220px;
+             height: 40px;
+             border-radius: 4px;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             justify-content: space-evenly;
+             cursor: pointer;
+         }
+         .over-potential {
+             color: #232f3e;
+             margin-top: 20px;
+             width: max-content;
+             font-size: 40px;
+             margin-bottom: 20px;
+         }
+         .ready-to-sell {
+             color: #232f3e;
+             margin-top: 18px;
+             font-size: large;
+             margin-bottom: 20px;
+         }
+         .list-sell ul {
+             list-style: none;
+         }
+         .list-sell li {
+             margin-bottom: 15px;
+             color: #232f3e;
+         }
+         .nav-like-your-brand-amazon {
+             height: 105px;
+             display: flex;
+             margin-top: 100px;
+             margin-left: 80px;
+         }
+         .end {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             margin-bottom: 30px;
+         }
+         .under-consturction {
+             margin-top: 10px;
+             height: 200px;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             font-size: large;
+             background-color: #232f3e;
+             border-radius: 10px;
+             color: white;
+         }
+         .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 3s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin-right: 100px;
+}
+.end-loder {
+    display: flex;
+    padding: 5px;
+    margin: 10px;
+    background-color: #008296;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+        
+</style>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-address border">
+                <p class="deliver">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p style="cursor: pointer;" class="india">India</p>
+                </div>
+            </div>
+            <div class="nav-search border">
+                <select style="cursor: pointer;" class="search-select">
+                    <option>All</option>
+                    <option>All Department</option>
+                    <option>Arts & Craft</option>
+                    <option>Automotive</option>
+                    <option>Baby</option>
+                    <option>Beauty & Personal Care</option>
+                    <option>Books</option>
+                    <option>Boys' Fashion</option>
+                    <option>Computers</option>
+                    <option>Deals</option>
+                    <option>Digital Music</option>  
+                    <option>Electronics</option>
+                    <option>Girls' Fashion</option>
+                    <option>Health & Household</option>
+                    <option>Home & Kitchen</option>
+                    <option>Industrial & Scientific</option>
+                    <option>Kindle Store</option>
+                    <option>Luggage</option>
+                    <option>Men's Fashion</option>
+                    <option>Movies & TV</option>
+                    <option>Music, CDs & Vinyl</option>
+                    <option>Pet Supplies</option>
+                    <option>Prime Videos</option>
+                    <option>Software</option>
+                    <option>Tools & Home Improvement</option>
+                    <option>Toys & Games</option>
+                    <option>Video Games</option>
+                    <option>Women's Fashion</option>
+                </select>
+                <input class="search-input" placeholder="Search Amazon">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-sign in border">
+               <button onclick="alert('You will be directed to sign in page.')"><p class="nav-first"><a href="amazon-sign-in.html"><span>Hello, sign in</span></a></p></button>
+                <p style="cursor: pointer;" class="nav-sec">Account & Lists</p>
+            </div>
+
+            <div style="cursor: pointer;" class="nav-return border">
+                <p class="nav-first"><a href="amazon-sign-in.html"><span>Return</span></a></p>
+                <p class="nav-sec"><a href="amazon-sign-in.html">& Orders</a></p>
+            </div>
+            <div style="cursor: pointer;" class="last border">
+                <div class="cart-icon">
+                    <i class="fa-solid fa-cart-plus"></i>
+                </div>
+                <div class="cart"><a href="cart.html">Cart</a></div>
+            </div>
+        </div>
+        <div class="down-navbar">
+            <a href="#">
+                <i class="fa-solid fa-bars"></i>
+                All</a>
+            <a href="#">Today's Deals</a>
+            <a href="customer_services.html">Costumer services</a>
+            <a href="registry.html">Registry</a>
+            <a href="#">Gift cards</a>
+            <a href="sell.html">Sell on amazon</a>
+            <a href="#" class="right">Shop Deals In Electronics</a>
+        </div>
+    </header>
+    <div class="start-sell-now">
+        <h1 style="color: #232f3e;">Sell with Amazon</h1>
+        <div class="center-start">
+        <img style="position: relative;left: -10px;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-dark.svg" alt="">
+        <div class="center-start-sell-now">
+            Start today for <b>5% back on up to $1,000,000</b> in branded sales. <br>
+            <a style="color: #232f3e;text-decoration: underline;" href=""><b>Learn how</b></a>
+        </div>
+        <img style="position: relative;left: 10px;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-dark.svg" alt="">
+    </div>
+     <button onclick="alert('yash navnath sabne')" style="background-color: #ff9900;color: #232f3e; width: 110px; height: 40px;border-radius: 17px;font-weight: 700;cursor: pointer;"> Sign up</button>
+    </div>
+    <div class="start-big">Start selling <br> with Amazon</div>
+<div class="fastest-growing">
+    The fastest-growing and preferred acquistion <br>
+    channel for over half our multichannel sellers.
+</div>
+<div class="sign-up-sells">
+<button class="sign-up-sell">
+    Sign up
+</button>
+$39.99 a month + selling fees
+</div>
+<div class="container">
+    <!-- <div class="start-big">Start selling <br> with Amazon</div> -->
+
+    <!-- Creating a SVG image -->
+    <svg viewBox="0 0 500 500"
+        preserveAspectRatio="xMinYMin meet">
+        
+        <path d="M0, 200 C140, 200 350,
+            0 500, 100 L500, 00 L0, 0 Z"
+            style="stroke:none; fill:rgb(216, 233, 250);">
+        </path>
+    </svg>
+    <img class="see-img" src="https://m.media-amazon.com/images/G/01/sell/images/homepage-hero-image-03-sm.png" alt="">
+</div>
+<div class="new-img-sell">
+    <div class="img1-yash">
+        <!-- <i class="fa-solid fa-circle-play fa-2xl"></i> -->
+        <!-- <i class="fa-regular fa-circle-play fa-2xl" style="color: #0040ff;"></i> -->
+     <a style="cursor: pointer;" href="https://google.com"> <img style="border-radius: 50%; height: 60px;width: 60px;cursor: pointer;"  src="data:image/jpeg;base64,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" alt=""></a>
+    </div>
+    <div class="img2-yash">
+        <div class="logo-yash">HOPE & YASH-TECHNOLOGY</div>
+        <div style="border: 6px solid rgb(56, 56, 255); width: 100px;" class="border"></div>
+   
+    <div class="TEXT-IMG2">
+        <h3> "I've actually been really impressed <br> and kind of surprised,<br> quite frankly
+        -at how much Amazon <br> has helped us build the brand;not just <br> on Amazon,but 
+         outside <br> of Amazon."</h3>
+    </div>
+    <div class="co-founder-name">
+        <img style="border-radius: 50%; margin-left: 25px;" src="yash_3.jpg" alt="founder-img">
+        <div class="name" style="color: white;margin-left: 10px;"><h4>Yash Navnath Sabne</h4>
+        <br> <p style="color: #eaeded;"> Co-founder</p></div>
+    </div>
+    <div class="boss-div">
+    <div class="div1">
+        <p style="font-size: xx-large;color: white; margin-top: 30px;margin-left: 20px;">74%</p>
+        <p style="color: white; margin-top: 14px;margin-left: 14px;">of Amazon Customers
+        use Amazon to discover new products <br> or brands.</p>
+
+    </div>
+    <div class="div1">
+        <p style="font-size: xx-large;color: white; margin-top: 30px;margin-left: 20px;">500K</p>
+        <p style="color: white; margin-top: 14px;margin-left: 14px;">brands are in Brand <br>
+Registry,unlocking<br> our powerful toools.</p>
+
+    </div>
+</div>
+</div>
+</div>
+<!-- over$50k -->
+<div class="all-new-seller-incentives">
+    <div class="new-seller-incentives-one-side">
+    <div class="new-seller-incentives">
+        <img style="color: white;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-dark.svg" alt="">
+        New Seller Incentives
+        <img style="color: white;" src="https://m.media-amazon.com/images/G/01/sell/images/icon-magic-sparkle-dark.svg" alt="">
+    </div>
+    <div class="over-potential">
+        <h3>Over $50K in potential <br> benefits</h3>
+    </div>
+
+    <div class="ready-to-sell">
+        Ready to sell? Launch your brand today with  a powerful playbool for <br>
+        new sellers and over $50K in potential benefits.
+    </div>
+    <div class="list-sell">
+        <ul>
+            <li>
+                <i class="fa-solid fa-check" style="color: #3165bf;"></i>
+                Get 5% back on your first $1000000 i brand sales
+            </li>
+            <li>
+                <i class="fa-solid fa-check" style="color: #3165bf;"></i>
+               Try FBA with free inbound shipping, storage, removals, ans returns
+            </li>
+            <li>
+                <i class="fa-solid fa-check" style="color: #3165bf;"></i>
+                Get $50 credit for Sponsored Products CPC ads--bids are up to you
+            </li>
+            <li>
+                <i class="fa-solid fa-check" style="color: #3165bf;"></i>
+               Get a head start on brand protection, product reviews, and more
+            </li>
+        </ul>
+    </div>
+    <a style="color: #232f3e; font-size: large; font-weight: 700; margin-top: 900px;" href=""><pre>Learn more  <i class="fa-solid fa-arrow-right"></i></pre></a>
+    
+</div>
+<div style="margin-left: 150px;" class="new-seller-incentives-other-side">
+    <img src="https://m.media-amazon.com/images/G/01/sell/images/illustration/illustration-growth-graph.svg" alt="sales growth image">
+</div>
+</div>
+
+<!-- business at scale -->
+
+<div class="nav-like-your-brand-amazon">
+    <div style="color: #232f3e; font-weight: 800;height: 37px; font-size: larger;margin-right: 120px;margin-right: 120px;display: flex;align-items: center;justify-content: center;" class="div-logo-type">
+        Your brand + Amazon
+    </div>
+
+    <div style="background-color: #ebf8fa; color: #232f3e;width: 176px;height: 37px;margin-right: 25px;display: flex;align-items: center;justify-content: center;border-radius: 5px;" class="your-business-scale">
+        Your business at scale
+    </div>
+
+    <div style="background-color: #d7f2f6; color: #232f3e;width: 176px;height: 37px;margin-right: 25px;display: flex;align-items: center;justify-content: center;border-radius: 5px;" class="yor-brand-experienced">
+        Your brand experienced 
+    </div>
+
+    <div style="background-color: #ebf8fa; color: #232f3e;width: 176px;height: 37px;margin-right: 25px;display: flex;align-items: center;justify-content: center;border-radius: 5px;" class="your-success-support">
+        Your success supported
+    </div>
+
+    <div style="background-color: #ebf8fa; color: #232f3e;width: 176px;height: 37px;margin-right: 25px;display: flex;align-items: center;justify-content: center;border-radius: 5px;" class="case-studies">
+        Case studies
+    </div>
+</div>
+<!-- underconstruction -->
+<div class="end">
+<div class="under-consturction">
+    THE REMAINING WEBSITE IS UNDER CONSTRUCTION. WE WILL COMPLETE IT VERY SOON
+    THANK YOU!
+</div>
+<div class="end-loder">
+
+<div class="loader"></div>
+
+<div class="loader"></div>
+
+<div class="loader"></div>
+</div>
+
+</div>
+</body>
+</html>
